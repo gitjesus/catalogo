@@ -3,11 +3,12 @@
 	$objeto=(object)$_GET;
 	$base=new base();
 
-$consulta="select  fecha,importe,'pago' as tipo  from pago where id=$objeto->id
+$consulta="select  fecha,importe,'pago' as tipo  from pago where id_per=$objeto->id
 union
 select fecha,total,'venta' from venta_detalle where id_per=$objeto->id
 
 order by fecha asc,tipo desc ;";
+
 $arr=$base->consultar($consulta);
 ?>
 <table class="table table-stripeds">
