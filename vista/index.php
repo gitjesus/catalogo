@@ -56,6 +56,7 @@
   </button>
   <ul class="dropdown-menu">
     <li><a href="#" destino="captura">Captura</a></li>
+    <li><a href="#" destino="actualizaP">Actualizar</a></li>
     <li><a href="#" destino="asociaPago">Agrega Pago</a></li>
 	<li><a href="#" destino="asociaProducto">Agrega Compra</a></li>
   </ul>
