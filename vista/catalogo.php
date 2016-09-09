@@ -20,6 +20,7 @@
 			$("#contenido").load("actualizaProducto.php?id_pro="+id_pro);
 		}
 	);
+	
 </script>
 <style>
 	#dvCatalogo
