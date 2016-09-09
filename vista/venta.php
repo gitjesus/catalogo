@@ -46,10 +46,11 @@
 					      	$("#tdPrecio").text(ui.item.precio);
 					      }
 					    });
-				$("#addProducto").click(function()
+				$("#addProducto").click(function(e)
 				{
+					e.preventDefault();
 					var total=parseFloat($("#cantidad").val())*parseFloat(producto.precio);
-					$("#productos").prepend("<tr class='trProducto'><td>"+producto.value+"<input type='hidden' name='producto[]' value='"+producto.id+"'></td><td class='text-center'>"+producto.precio+"</td><td class='text-center'>"+$("#cantidad").val()+"<input type='hidden' name='cantidad[]' value='"+$("#cantidad").val()+"'></td><td class='text-center'>"+total+"<input type='hidden' name='total[]' value='"+total+"' ></td></tr>");
+					$("#productos").prepend("<tr class='trProducto'><td>"+producto.value+"<input type='hidden' name='producto[]' value='"+producto.id+"'></td><td class='text-center'>"+producto.precio+"</td><td class='text-center'>"+$("#cantidad").val()+"<input type='hidden' name='cantidad[]' value='"+$("#cantidad").val()+"'></td><td class='text-center'>"+total.toFixed(2)+"<input type='hidden' name='total[]' value='"+total+"' ></td></tr>");
 					producto=null;
 					$("#autoProducto").val("");
 					$("#tdPrecio").text("");
@@ -97,7 +98,8 @@
     	</thead>
     	<tbody id="productos">
     		<tr>
-    			<td><input type="text" size='40' id="autoProducto"></td><td id='tdPrecio' class="text-center">&nbsp;</td><td class="text-center"><input type='text' class="text-center numero" size="3" id='cantidad' value="1" ></td><td class="text-center"><span id="addProducto" class=" 	glyphicon glyphicon-plus"></span></td>
+    			<td><input type="text" size='40' id="autoProducto"></td><td id='tdPrecio' class="text-center">&nbsp;</td><td class="text-center"><input type='text' class="text-center numero" size="3" id='cantidad' value="1" ></td><td class="text-center"><button id="addProducto" class="btn btn-info"><span  class=" 	glyphicon glyphicon-plus"></span>
+</button></td>
     		</tr>
     	</tbody>
     	<thead>

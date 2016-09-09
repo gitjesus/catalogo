@@ -2,7 +2,7 @@
 	include '../Clases/base.php';
 	$objeto=(object)$_GET;
 	$base=new base();
-	$consulta="select * from persona per join direccion dir on  per.id_dir=dir.id_dir where id=$objeto->id";
+	$consulta="select per.*,dir.*,date_format(fecha_registro,'%d/%m/%Y') as fechaf from persona per join direccion dir on  per.id_dir=dir.id_dir where id=$objeto->id";
 
 	$arr=$base->consultar($consulta);
 	$persona=$arr[0];
@@ -57,7 +57,7 @@
 			<th>Direccion</th><td nowrap=""><?=$persona->colonia." ".$persona->calle." ".$persona->numero?></td>
 		</tr>
 		<tr>
-			<th nowrap="">Fecha Captura</th><td><?=$persona->fecha_registro?></td>
+			<th nowrap="">Fecha Captura</th><td><?=$persona->fechaf?></td>
 		</tr>
 	</thead>
 </table>

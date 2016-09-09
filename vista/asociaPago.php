@@ -46,11 +46,7 @@
               {
               	var id=0;
               	
-              		$("#fechaPago").datepicker(
-              		{
-              			dateFormat: "yy-mm-dd"
-              		}
-              		);	
+              		$("#fechaPago").datepicker();	
               		
                       $( "#nombrePersona" ).autocomplete({
 					      source: "../accion/auto_complete.php",

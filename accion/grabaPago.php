@@ -2,7 +2,10 @@
 include '../Clases/base.php';
 $objeto=(object)$_POST;
 
-$sentencia="insert into pago values(null,'$objeto->fecha',$objeto->importe,$objeto->id)";
+$arr=explode( "/", $objeto->fecha);
+$objeto->fecha_=$arr[2]."-".$arr[1]."-".$arr[0];
+
+$sentencia="insert into pago values(null,'{$objeto->fecha_}',$objeto->importe,$objeto->id)";
 
 $base= new base();
 if($base->ejecutar($sentencia))
