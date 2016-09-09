@@ -67,6 +67,7 @@
   </button>
   <ul class="dropdown-menu">
     <li><a href="#" destino="capturaProducto">Captura</a></li>
+    <li><a href="#" destino="catalogo">Catalogo</a></li>
   </ul>
 </div>
  <div class="btn-group"> 
