@@ -70,11 +70,16 @@
     <li><a href="#" destino="catalogo">Catalogo</a></li>
   </ul>
 </div>
- <div class="btn-group"> 
-    <button type="button" class="btn btn-success" aria-haspopup="true" id="btnReporte" >
-    <span class="glyphicon glyphicon-list-alt"></span> &nbsp;Reporte 
+<div class="btn-group"> 
+    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-tag"></span> &nbsp;Reporte <span class="caret"></span>
   </button>
+  <ul class="dropdown-menu">
+    <li><a href="#" destino="reporte">Cliente</a></li>
+    <li><a href="#" destino="reporteFechas">Fechas</a></li>
+  </ul>
 </div>
+
 </div>
 <div class="modal info fade" id="modal-mensaje">
   <div class="modal-dialog" role="document">

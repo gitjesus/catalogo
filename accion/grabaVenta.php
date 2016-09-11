@@ -7,7 +7,7 @@ $objeto=(object)$_POST;
 
 foreach($objeto->producto as $key => $value)
 {
-	$sentencia="insert into venta_detalle values(null,$objeto->id,{$objeto->producto[$key]},{$objeto->cantidad[$key]},now(),{$objeto->total[$key]})";
+	$sentencia="insert into venta_detalle values(null,$objeto->id,{$objeto->producto[$key]},{$objeto->cantidad[$key]},now(),{$objeto->total[$key]},{$objeto->costo[$key]})";
 	$base->ejecutar($sentencia);
 }
 echo "ok";

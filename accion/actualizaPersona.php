@@ -13,6 +13,9 @@ if($base->ejecutar($sentencia))
 	{
 		echo "ok";
 	}
+	else {
+		echo "ok";
+	}
 }
 
 ?>

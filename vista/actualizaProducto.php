@@ -88,7 +88,7 @@
             		<th>Descripcion</th>
 
 
-            		<td><textarea cols="50" rows="10" name="descripcion" value="<?=$producto->descripcion?>"></textarea></td>
+            		<td><textarea cols="50" rows="10" name="descripcion"><?=$producto->descripcion?></textarea></td>
             	</tr>   
             	            	<tr>
             		<th>costo</th>

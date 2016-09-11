@@ -50,7 +50,8 @@
 				{
 					e.preventDefault();
 					var total=parseFloat($("#cantidad").val())*parseFloat(producto.precio);
-					$("#productos").prepend("<tr class='trProducto'><td>"+producto.value+"<input type='hidden' name='producto[]' value='"+producto.id+"'></td><td class='text-center'>"+producto.precio+"</td><td class='text-center'>"+$("#cantidad").val()+"<input type='hidden' name='cantidad[]' value='"+$("#cantidad").val()+"'></td><td class='text-center'>"+total.toFixed(2)+"<input type='hidden' name='total[]' value='"+total+"' ></td></tr>");
+					var costo=parseFloat($("#cantidad").val())*parseFloat(producto.costo);
+					$("#productos").prepend("<tr class='trProducto'><td>"+producto.value+"<input type='hidden' name='producto[]' value='"+producto.id+"'></td><td class='text-center'>"+producto.precio+"</td><td class='text-center'>"+$("#cantidad").val()+"<input type='hidden' name='cantidad[]' value='"+$("#cantidad").val()+"'></td><td class='text-center'>"+total.toFixed(2)+"<input type='hidden' name='total[]' value='"+total+"' ><input type='hidden' name='costo[]' value='"+costo+"' ></td></tr>");
 					producto=null;
 					$("#autoProducto").val("");
 					$("#tdPrecio").text("");
