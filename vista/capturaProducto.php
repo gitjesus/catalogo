@@ -19,6 +19,12 @@
         <script>
             $(function()
               {
+              	
+              	 $("#btnCancelar").click(function()
+                 {
+                 	$("#contenido").html("");
+                 });	
+              	
                  $("#btnGrabaProducto").click(function()
                  {
                  	

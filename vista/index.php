@@ -77,6 +77,7 @@
   <ul class="dropdown-menu">
     <li><a href="#" destino="reporte">Cliente</a></li>
     <li><a href="#" destino="reporteFechas">Fechas</a></li>
+    <li><a href="#" destino="utilidadFechas">utilidad</a></li>
   </ul>
 </div>
 

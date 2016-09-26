@@ -65,6 +65,11 @@
                  		}
                  	});
                  }); 
+                 
+                 $("#btnCancelar").click(function()
+                 {
+                 	$("#contenido").html("");
+                 });
               });
         </script>
 
@@ -99,7 +104,7 @@
             	<tr>
             		<th class="text-center"><input type="button" class="btn xs-btn btn-success" id="btnActualizaPersona" value="Actualizar"></th>
             		<th></th>
-            		<th class="text-center"><input type="reset" class="btn xs-btn btn-warning" id="btnCancekar" value="Cancelar"></th>
+            		<th class="text-center"><input type="reset" class="btn xs-btn btn-warning" id="btnCancelar" value="Cancelar"></th>
             	</tr>
             </tfoot>
         </table>
